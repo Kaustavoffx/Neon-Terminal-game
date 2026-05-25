@@ -96,3 +96,116 @@ body{
 /*=========================
     STORY PANEL
 =========================*/
+
+.story-panel{
+    min-height: 180px;
+
+    background: rgba(0,0,0,0.35);
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    border: 1px solid rgba(0,255,255,0.2);
+
+    margin-bottom: 25px;
+
+    line-height: 1.8;
+}
+
+#story-text{
+    color: #dffefe;
+
+    font-size: 18px;
+}
+
+/*=========================
+    INPUT
+=========================*/
+
+#typing-input{
+
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+
+    background: rgba(255,255,255,0.08);
+
+    color:white;
+
+    font-size: 16px;
+
+    border: 2px solid transparent;
+
+    transition: 0.3s;
+}
+
+#typing-input:focus{
+    border-color:cyan;
+
+    box-shadow: 
+    0 0 10px rgba(0,255,255,0.4);
+}
+
+#typing-input::placeholder{
+    color: #a0a0a0;
+}
+
+/*=========================
+    BUTTON
+=========================*/
+
+#start-btn{
+    width: 100px;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: cyan;
+
+    color: black;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#start-btn:hover{
+    transform: translateY(-2px);
+
+    box-shadow: 
+    0 0 20px rgba(0,255,255,0.5);
+}
+
+/*=========================
+    FOOTER
+=========================*/
+
+.footer-text{
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #7c8a8a;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+}
+
