@@ -4,13 +4,15 @@
 
 const storyLines = [
 
-    "The city went silent at exactly 2:13 AM. ",
+    "The city went silent at exactly 2:13 AM.",
+
+    "Emergency broadcasts stopped without warning.",
     
-    "Only one terminal remained connected. ",
+    "Only one terminal remained connected to the Network.",
 
-    "A strange signal appeared on the screen. ",
+    "A strange encrypted message appeared on the screen.",
 
-    "If you are reading this... Stay offline"
+    "If you are reading this... Disconnect immediately."
 
 ];
 
@@ -126,7 +128,7 @@ typingInput.addEventListener("input", () =>{
 // =========================
 
 restartBtn.addEventListener("click", ()=>{
-    
+
     currentLine = 0;
 
     typingInput.disabled = false;
