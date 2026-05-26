@@ -24,6 +24,8 @@ const typingInput = document.getElementById("typing-input");
 
 const startBtn = document.getElementById("start-btn");
 
+const restartBtn = document.getElementById("restart-btn");
+
 // =========================
 // VARIABLES
 // =========================
@@ -56,11 +58,11 @@ function showLine(){
 
     storyText.textContent = "";
 
-    currentLine = storyLines[currentLine];
+    currentText = storyLines[currentLine];
 
     typingIndex = 0;
 
-    const typingAnimatin = setInterval(() => {
+    const typingAnimation = setInterval(() => {
 
         storyText.textContent += currentText.charAt(typingIndex);
 
@@ -109,10 +111,32 @@ typingInput.addEventListener("input", () =>{
 
             typingInput.disabled = true;
 
+            restartBtn.style.display = "block";
+
             return;
 
         }
         showLine();
     }
+
+});
+
+// =========================
+// RESTART LOGIC
+// =========================
+
+restartBtn.addEventListener("click", ()=>{
+    
+    currentLine = 0;
+
+    typingInput.disabled = false;
+
+    typingInput,value = "";
+
+    typingInput.focus();
+
+    restartBtn.style.display = "none";
+
+    showLine();
 
 });

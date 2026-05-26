@@ -192,6 +192,43 @@ body{
     0 0 20px rgba(0,255,255,0.5);
 }
 
+
+#restart-btn{
+
+    width: 100%;
+    
+    padding: 16px;
+
+    margin-top:15px;
+
+    border:none;
+
+    border-radius: 12px;
+
+    background: transparent;
+
+    border:1px solid cyan;
+
+    color: cyan;
+
+    cursor: pointer;
+
+    display: none;
+
+    transition: 0.3s;;
+}
+
+#restart-btn::hover{
+    
+    background: cyan;
+
+    color: black;
+}
+
+
+
+
+
 /*=========================
     FOOTER
 =========================*/
