@@ -159,6 +159,38 @@ body{
 
     box-shadow: 
     inset 0 0 25px rgba(0,255,255,0.04);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.story-panel::before{
+    content: "";
+
+    position: absolute;
+
+    width:200%;
+
+    height: 2px;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    top:0;
+    left: -100%;
+
+    animation: scanMove 5s linear infinite;
+}
+
+@keyframes scanMove{
+    
+    0%{
+        left:-100%
+    }
+
+    100%{
+        left: 100%;
+    }
 }
 
 #story-text{
@@ -308,7 +340,7 @@ body{
 =========================*/
 
 .char-counter{
-    
+
     margin-top:15px;
 
     text-align: right;

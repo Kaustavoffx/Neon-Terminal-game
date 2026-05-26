@@ -115,9 +115,10 @@ typingInput.addEventListener("input", () =>{
 
         return;
     }
-    
+
     const typedText = typingInput.value;
     
+    //Character counter
     charCount.textContent = typedText.length;
 
     //terminal glow feedback
