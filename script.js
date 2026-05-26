@@ -58,6 +58,14 @@ startBtn.addEventListener("click",()=> {
 
 function showLine(){
 
+    storyText.style.opacity = 0;
+
+    setTimeout(() => {
+
+        storyText.style.opacity = 1;
+
+    }, 200);
+    
     storyText.textContent = "";
 
     currentText = storyLines[currentLine];

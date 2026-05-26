@@ -302,6 +302,8 @@ body{
 
     #story-text{
         font-size:16px;
+
+        opacity: 1;
     }
 
 }
