@@ -108,7 +108,22 @@ function showLine(){
 
 typingInput.addEventListener("input", () =>{
 
+    // prevent typing during animation
+    if(isAnimating){
+        
+        return;
+    }
+
     const typedText = typingInput.value;
+
+    //terminal glow feedback
+    storyText.classList.add("typing-active");
+
+    setTimeout(() => {
+
+        storyText.classList.remove("typing-active");
+
+    },100)
 
     //correct typing
     if(currentText.startsWith(typedText)){
@@ -116,12 +131,12 @@ typingInput.addEventListener("input", () =>{
         typingInput.style.borderColor = "lime";
 
     }
-
+    
     // wrong typing
     else{
         typingInput.style.borderColor = "red";
     }
-
+    
     //line completed
     if(typedText === currentText){
 
