@@ -37,6 +37,7 @@ const systemStatus = document.getElementById("system-status");
 let currentLine = 0;
 let currentText = "";
 let typingIndex = 0;
+let isAnimating = false;
 
 // =========================
 // START GAME
@@ -62,6 +63,10 @@ startBtn.addEventListener("click",()=> {
 
 function showLine(){
 
+    isAnimating = true;
+
+    typingInput.disabled = true;
+
     storyText.style.opacity = 0;
 
     setTimeout(() => {
@@ -85,6 +90,12 @@ function showLine(){
         if(typingIndex >= currentText.length){
 
             clearInterval(typingAnimation);
+
+            isAnimating = false;
+
+            typingInput.disabled = false;
+
+            typingInput.focus();
         }
 
     }, 40);
