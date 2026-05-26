@@ -30,6 +30,8 @@ const restartBtn = document.getElementById("restart-btn");
 
 const systemStatus = document.getElementById("system-status");
 
+const charCount = document.getElementById("char-count");
+
 // =========================
 // VARIABLES
 // =========================
@@ -110,11 +112,13 @@ typingInput.addEventListener("input", () =>{
 
     // prevent typing during animation
     if(isAnimating){
-        
+
         return;
     }
-
+    
     const typedText = typingInput.value;
+    
+    charCount.textContent = typedText.length;
 
     //terminal glow feedback
     storyText.classList.add("typing-active");
