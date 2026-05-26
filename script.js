@@ -28,6 +28,8 @@ const startBtn = document.getElementById("start-btn");
 
 const restartBtn = document.getElementById("restart-btn");
 
+const systemStatus = document.getElementById("system-status");
+
 // =========================
 // VARIABLES
 // =========================
@@ -41,6 +43,8 @@ let typingIndex = 0;
 // =========================
 
 startBtn.addEventListener("click",()=> {
+
+    systemStatus.textContent = "system status: CONNECTED";
 
     startBtn.style.display="none";
 
@@ -65,7 +69,7 @@ function showLine(){
         storyText.style.opacity = 1;
 
     }, 200);
-    
+
     storyText.textContent = "";
 
     currentText = storyLines[currentLine];
@@ -117,7 +121,7 @@ typingInput.addEventListener("input", () =>{
         //end of story
         if(currentLine >= storyLines.length){
 
-            storyText.textContent = "TRANSMISSION TERMINATED.";
+            systemStatus.textContent = "System Status: TERMINATED";
 
             typingInput.disabled = true;
 
