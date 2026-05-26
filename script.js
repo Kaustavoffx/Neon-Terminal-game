@@ -133,7 +133,7 @@ restartBtn.addEventListener("click", ()=>{
 
     typingInput.disabled = false;
 
-    typingInput,value = "";
+    typingInput.value = "";
 
     typingInput.focus();
 

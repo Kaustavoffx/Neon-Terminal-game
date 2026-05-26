@@ -57,7 +57,7 @@ body{
 }
 
 .container::after{
-    
+
     content: "";
 
     position:absolute;
@@ -216,6 +216,11 @@ body{
 }
 
 #start-btn:hover{
+
+    background: cyan;
+
+    color: black;
+
     transform: translateY(-2px);
 
     box-shadow: 
@@ -250,12 +255,18 @@ body{
     transition: 0.3s;;
 }
 
-#restart-btn::hover{
+#restart-btn:hover{
     
     background: cyan;
 
     color: black;
+
+    transform: translateY(-2px);
+
+    box-shadow: 
+    0 0 20px rgba(0, 225, 255, 0.644);
 }
+
 
 
 /*=========================
